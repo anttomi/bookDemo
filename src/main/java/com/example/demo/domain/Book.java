@@ -1,9 +1,12 @@
 package com.example.demo.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+@Entity
 public class Book {
     
     @Id
@@ -13,13 +16,13 @@ public class Book {
     private int year;
     private double price;
     
-    public Book(Long id, String title, String author, int year, String isbn, double price) {
+
+    public Book(String title, String author, String isbn, int year, double price) {
 	super();
-	this.id = id;
 	this.title = title;
 	this.author = author;
-	this.year = year;
 	this.isbn = isbn;
+	this.year = year;
 	this.price = price;
     }
     
@@ -27,14 +30,6 @@ public class Book {
 	
     }
 
-    public Book(String title, String author, int year, String isbn, double price) {
-	super();
-	this.title = title;
-	this.author = author;
-	this.year = year;
-	this.isbn = isbn;
-	this.price = price;
-    }
 
     public Long getId() {
         return id;
