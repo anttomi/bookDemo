@@ -18,9 +18,9 @@ public class BookstoreApplication {
 	@Bean
 	public CommandLineRunner demo(BookRepository repository) {
 	    return (args) -> {
-		Book book1 = new Book("Hyvä kirja", "Janne", "35353-2", 2004, 3);
-		Book book2 = new Book("Huono kirja", "Kalle", "45645-2", 1550, 10.70);
-		Book book3 = new Book("Iha jees kirja", "Maarit", "62623-2", 1890, 200);
+		Book book1 = new Book("Hyvä kirja", "Janne", "35353-2", 2004);
+		Book book2 = new Book("Huono kirja", "Kalle", "45645-2", 1550);
+		Book book3 = new Book("Iha jees kirja", "Maarit", "62623-2", 1890);
 		
 		repository.save(book1);
 		repository.save(book2);

@@ -14,16 +14,14 @@ public class Book {
     private Long id;
     private String title,author,isbn;
     private int year;
-    private double price;
     
 
-    public Book(String title, String author, String isbn, int year, double price) {
+    public Book(String title, String author, String isbn, int year) {
 	super();
 	this.title = title;
 	this.author = author;
 	this.isbn = isbn;
 	this.year = year;
-	this.price = price;
     }
     
     public Book() {
@@ -71,17 +69,9 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {
-	return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + year + ", isbn=" + isbn
-		+ ", price=" + price + "]";
+	return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + year + ", isbn=" + isbn;
     }
 }
