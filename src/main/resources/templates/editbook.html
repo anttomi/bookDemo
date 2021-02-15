@@ -10,14 +10,28 @@
 <form th:object="${book}" th:action="@{../save}" action="#" method="post">
 <label for="id"></label>
 <input type="hidden" id="id" th:field="*{id}" readonly="readonly" />
+<br>
 <label for="author">Author: </label>
 <input id="author" th:field="*{author}"/>
+<br>
 <label for="title">Title: </label>
 <input id="title" th:field="*{title}"/>
+<br>
 <label for="isbn">ISBN: </label>
 <input id="isbn" th:field="*{isbn}"/>
+<br>
 <label for="year">Year: </label>
 <input id="year" th:field="*{year}"/>
+<br>
+<label for="catlist">Categories: </label>
+<select id="catlist" th:field="*{category}">
+	<option th:each="category: ${categories}" 
+	th:value="${category.categoryid}"
+	th:text="${category.name}">
+	</option>
+	</select>
+
+	<br>
 <input type="submit" value="Save"/>
 </form>
 
