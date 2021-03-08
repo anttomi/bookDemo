@@ -33,7 +33,12 @@ public class BookController {
     @RequestMapping(value="/books", method = RequestMethod.GET)
     public @ResponseBody List<Book> bookListRest() {	
         return (List <Book>) bookRepository.findAll();
-    }    
+    }
+    
+    @GetMapping(value="/login")
+    public String login() {
+	return "login";
+    }
     
     @RequestMapping(value="/add")
     public String addBook(Model model) {
