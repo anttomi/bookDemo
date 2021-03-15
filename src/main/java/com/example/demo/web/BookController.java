@@ -36,7 +36,7 @@ public class BookController {
 	return (List<Book>) bookRepository.findAll();
     }
 
-    @GetMapping(value = "/login")
+    @GetMapping(value = {"/login", "/"})
     public String login() {
 	return "login";
     }
