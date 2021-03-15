@@ -46,7 +46,7 @@ public class BookstoreApplication {
 		bRep.save(book1);
 		bRep.save(book2);
 		bRep.save(book3);
-		
+		uRep.deleteAll();
 
 	    };
 	}
