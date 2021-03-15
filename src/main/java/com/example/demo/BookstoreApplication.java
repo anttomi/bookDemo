@@ -28,6 +28,7 @@ public class BookstoreApplication {
 		Category category1 = new Category("Sci-fi");
 		Category category2 = new Category("Fantasy");
 		Category category3 = new Category("Children");
+		cRep.deleteAll();
 		
 		User user1 = new User("user", "$2a$10$U0021easazMrjG1E2VfKe.ptEgHYSW6RuGTnJFPFAUrBHTXaJUNwC", "USER", "user@user.com");
 		User user2 = new User("admin", "$2a$10$LWRNHeTjf/5FryyyIsUbKezOH1qqqOfJ45smIBjMcpeYP.FmWHscC", "ADMIN", "admin@admin.com");
