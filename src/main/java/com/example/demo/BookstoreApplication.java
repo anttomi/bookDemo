@@ -35,7 +35,7 @@ public class BookstoreApplication {
 		Book book1 = new Book("Hyvä kirja", "Janne", "35353-2", 2004, category1);
 		Book book2 = new Book("Huono kirja", "Kalle", "45645-2", 1550, category2);
 		Book book3 = new Book("Iha jees kirja", "Maarit", "62623-2", 1890, category3);
-		
+		uRep.deleteAll();
 		uRep.save(user1);
 		uRep.save(user2);
 		
@@ -46,7 +46,7 @@ public class BookstoreApplication {
 		bRep.save(book1);
 		bRep.save(book2);
 		bRep.save(book3);
-		uRep.deleteAll();
+		
 
 	    };
 	}
